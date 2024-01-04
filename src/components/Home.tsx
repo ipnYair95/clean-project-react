@@ -4,7 +4,7 @@ import styles from './Home.module.scss';
 
 export const Home = () => {
 
-  const [field, setField] = useState("");
+  const [field, setField] = useState<any>("");
 
   const [fieldSelect, setFieldSelect] = useState("");
 
@@ -23,7 +23,7 @@ export const Home = () => {
 
       <button className={styles.btn} onClick={() => setField("Seteo")} > seteo </button>
 
-      <button className={styles.btn} onClick={() => setField("")}  > clean </button>
+      <button className={styles.btn} onClick={() => setField(undefined)}  > clean </button>
 
       <hr />
 
@@ -39,6 +39,8 @@ export const Home = () => {
       <button className={styles.btn} onClick={() => setFieldSelect("a")} > seteo </button>
 
       <button className={styles.btn} onClick={() => setFieldSelect("")}  > clean </button>
+
+      <button className={styles.btn} onClick={() => setItems(["1","2","3"])}  > change items </button>
 
 
 
